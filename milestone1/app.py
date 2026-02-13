@@ -216,5 +216,22 @@ elif st.session_state.page == "dashboard":
         st.session_state.page = "login"
         st.rerun()
 
+from pyngrok import ngrok
+import subprocess
+import time
+
+# 🔴 Replace with your NEW ngrok token
+NGROK_AUTH_TOKEN = "Token"
+
+ngrok.kill()
+ngrok.set_auth_token(NGROK_AUTH_TOKEN)
+
+process = subprocess.Popen(["streamlit", "run", "app.py"])
+
+time.sleep(5)
+
+public_url = ngrok.connect(8501)
+print("🚀 App Running At:")
+print(public_url)
 
 
