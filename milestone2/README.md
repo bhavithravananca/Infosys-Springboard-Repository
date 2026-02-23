@@ -5,14 +5,14 @@ Secure LLM-Based Dashboard with Authentication, Chat Management, Readability Ana
 
 📖 Description
 
-In Milestone 2, we extended the User Authentication System developed in Milestone 1 into a full-featured secure dashboard application. This milestone introduces multi-user chat management, text readability analytics, data export, and an admin command center, all protected by secure authentication mechanisms.
+In Milestone 2, the User Authentication System developed in Milestone 1 was extended into a secure, feature-rich dashboard application. This milestone introduces multi-user chat management, text readability analytics, data export capabilities, and an admin command center, all protected by strong authentication and recovery mechanisms.
 
-The application is built using Streamlit for the user interface, SQLite for persistent data storage, JWT and OTP-based verification for enhanced security, and Ngrok for public access during development and demonstration.
+The application is developed using Streamlit for the frontend, SQLite for database storage, JWT and OTP-based verification for enhanced security, and Ngrok for generating a public URL to access the locally hosted application.
 
-This milestone serves as the backbone for future LLM-powered AI interactions and analytics modules.
+This milestone lays the foundation for future LLM-powered AI features, including intelligent chat, document analysis, and policy-based insights.
 
 🚀 Features Implemented
-1. Secure User Authentication (Enhanced)
+1. Secure User Authentication
 
 User Signup with:
 
@@ -22,35 +22,35 @@ Email format validation
 
 Password validation (8–20 characters, special characters required)
 
-Security Question & Answer
+Security question and answer
 
 Secure password hashing
 
-Login with Email and Password
+Login using Email ID and Password
 
 Session-based authentication
 
-Logout and session reset
+Logout functionality
 
 2. Forgot Password & Recovery System
 
-Password recovery via:
+Password recovery using:
 
-OTP-based email verification
+Email OTP verification
 
 Security question verification
 
-OTP secured using JWT and bcrypt
+OTP generated securely and verified using JWT and bcrypt
 
-OTP expiration mechanism
+OTP expiry mechanism
 
-Password update with validation
+Password reset with validation
 
-Old password reuse prevention
+Prevention of old password reuse
 
 3. Nebula Chat System
 
-Multi-threaded chat system per user
+Multi-threaded chat system for each user
 
 Create, rename, and delete chat threads
 
@@ -58,7 +58,7 @@ Persistent chat history stored in SQLite
 
 Role-based message storage (user / assistant)
 
-Export chat logs as CSV
+Export chat history as CSV
 
 Clear entire chat history
 
@@ -72,7 +72,7 @@ TXT files
 
 PDF files
 
-Readability metrics calculated:
+Readability metrics:
 
 Flesch Reading Ease
 
@@ -84,9 +84,9 @@ Gunning Fog Index
 
 Coleman–Liau Index
 
-Visual analytics using interactive gauges
+Interactive visual analytics using Plotly
 
-Readability scan history storage
+Scan history storage
 
 Export readability data as CSV
 
@@ -98,11 +98,11 @@ Centralized data export system
 
 Download:
 
-Chat history
+Chat logs
 
-Readability analytics
+Readability analysis data
 
-Bulk delete user data
+Bulk deletion of user data
 
 Secure user-wise data isolation
 
@@ -114,19 +114,17 @@ View all registered users
 
 Delete users from the system
 
-Automatically removes:
+Automatic cleanup of:
 
 User accounts
 
 Chat history
 
-Readability data
-
-Real-time system management
+Readability records
 
 7. UI & Experience Enhancements
 
-Galaxy-themed UI with custom CSS
+Galaxy-themed UI using custom CSS
 
 Glassmorphism effects
 
@@ -134,15 +132,13 @@ Responsive layout
 
 Sidebar-based navigation
 
-Visual feedback and animations
-
 8. Ngrok Integration
 
-Streamlit app hosted locally
+Streamlit application hosted locally
 
 Ngrok used to generate a public URL
 
-Enables live demonstrations and remote access
+Enables remote access and live demonstrations
 
 🛠 Technologies Used
 
@@ -181,56 +177,91 @@ Step 4: Connect Ngrok (Optional – For Public Access)
 from pyngrok import ngrok
 ngrok.set_auth_token("YOUR_NGROK_AUTH_TOKEN")
 📸 Screenshots
+🔐 Authentication & Recovery
 
 Login Page
 
+
 Signup Page
 
-Forgot Password (OTP & Security Question)
 
-Nebula Chat Interface
+Forgot Password – Email Verification
 
-Cognitive Text Scanner Dashboard
 
-Admin Command Center
+Password Reset Options
 
-(Screenshots to be added in the repository)
 
-🌐 Demonstration Link
+OTP Verification
 
-Ngrok Public URL:
-(Add your generated Ngrok URL here)
+
+OTP Mail
+
+
+Security Code Verification
+
+
+👤 User & Chat
+
+User Dashboard
+
+
+Chat History
+
+
+📊 Analytics
+
+File Readability Analyzer
+
+
+🛡️ Admin Module
+
+Admin Login
+
+
+Admin Dashboard
+
 
 📂 Project Structure
 milestone2/
 │
 ├── app.py
-├── InfosysSpringBoard_Internship_Milestone2.ipynb
+├── MileStone_2.ipynb
 ├── README.md
 ├── screenshots/
-│   ├── login.png
-│   ├── signup.png
-│   ├── chat.png
-│   ├── analytics.png
-│   └── admin.png
-|   ├── 
+│   ├── Login.png
+│   ├── Sign_up.png
+│   ├── Forgot_password_email_verification.png
+│   ├── Password_Reset_Options.png
+│   ├── OTP_Verification.png
+│   ├── OTP_mail.png
+│   ├── Security_code.png
+│   ├── User_page.png
+│   ├── history.png
+│   ├── File_Readability.png
+│   ├── Admin.png
+│   └── Admin_Dashboard.png
+🌐 Demonstration Link
+
+Ngrok Public URL:
+https://moonily-jubilatory-curt.ngrok-free.dev/
+
 ✅ Milestone 2 Outcome
 
-Successfully developed a secure, scalable, and feature-rich dashboard system with:
+Successfully developed a secure, scalable dashboard system with:
 
-Strong authentication & recovery mechanisms
+Strong authentication and recovery mechanisms
 
 Persistent chat management
 
 Advanced readability analytics
 
-Secure data export & deletion
+Secure data export and deletion
 
 Admin-level system control
 
-Public access via Ngrok
+Public access using Ngrok
 
-This milestone establishes a robust foundation for future LLM-based AI integration.
+This milestone forms a robust foundation for future LLM-based AI integration.
 
 👨‍💻 Author
 
