@@ -1,227 +1,260 @@
-Milestone 2 – Secure LLM Dashboard & Analytics System
-📌 Project Title
 
-Secure LLM-Based Dashboard with Authentication, Chat Management, Readability Analytics, and Admin Control using Streamlit, SQLite, JWT, and Ngrok
+# **Milestone 2 – Secure LLM Dashboard & Analytics System**
 
-📖 Description
+---
 
-In Milestone 2, the User Authentication System developed in Milestone 1 was extended into a secure, feature-rich dashboard application. This milestone introduces multi-user chat management, text readability analytics, data export capabilities, and an admin command center, all protected by strong authentication and recovery mechanisms.
+## 📌 Project Title
 
-The application is developed using Streamlit for the frontend, SQLite for database storage, JWT and OTP-based verification for enhanced security, and Ngrok for generating a public URL to access the locally hosted application.
+**Secure LLM-Based Dashboard with Authentication, Chat Management, Readability Analytics, and Admin Control using Streamlit, SQLite, JWT, and Ngrok**
 
-This milestone lays the foundation for future LLM-powered AI features, including intelligent chat, document analysis, and policy-based insights.
+---
 
-🚀 Features Implemented
-1. Secure User Authentication
+## 📖 Description
 
-User Signup with:
+In **Milestone 2**, the User Authentication System developed in Milestone 1 was extended into a **secure, feature-rich dashboard application**. This milestone introduces **multi-user chat management**, **text readability analytics**, **data export capabilities**, and an **admin command center**, all protected by strong authentication and recovery mechanisms.
 
-Username validation
+The application is developed using **Streamlit** for the frontend, **SQLite** for database storage, **JWT and OTP-based verification** for enhanced security, and **Ngrok** for generating a public URL to access the locally hosted application.
 
-Email format validation
+This milestone lays the foundation for future **LLM-powered AI features**, including intelligent chat, document analysis, and policy-based insights.
 
-Password validation (8–20 characters, special characters required)
+---
 
-Security question and answer
+## 🚀 Features Implemented
 
-Secure password hashing
+### 1. Secure User Authentication
 
-Login using Email ID and Password
+* User Signup with:
 
-Session-based authentication
+  * Username validation
+  * Email format validation
+  * Password validation (8–20 characters, special characters required)
+  * Security question and answer
+* Secure password hashing
+* Login using Email ID and Password
+* Session-based authentication
+* Logout functionality
 
-Logout functionality
+---
 
-2. Forgot Password & Recovery System
+### 2. Forgot Password & Recovery System
 
-Password recovery using:
+* Password recovery using:
 
-Email OTP verification
+  * **Email OTP verification**
+  * **Security question verification**
+* OTP generated securely and verified using JWT and bcrypt
+* OTP expiry mechanism
+* Password reset with validation
+* Prevention of old password reuse
 
-Security question verification
+---
 
-OTP generated securely and verified using JWT and bcrypt
+### 3. Nebula Chat System
 
-OTP expiry mechanism
+* Multi-threaded chat system for each user
+* Create, rename, and delete chat threads
+* Persistent chat history stored in SQLite
+* Role-based message storage (user / assistant)
+* Export chat history as CSV
+* Clear entire chat history
 
-Password reset with validation
+---
 
-Prevention of old password reuse
+### 4. Cognitive Text Scanner (Readability Analyzer)
 
-3. Nebula Chat System
+* Manual text input (minimum 50 characters)
+* File upload support:
 
-Multi-threaded chat system for each user
+  * TXT files
+  * PDF files
+* Readability metrics:
 
-Create, rename, and delete chat threads
+  * Flesch Reading Ease
+  * Flesch–Kincaid Grade
+  * SMOG Index
+  * Gunning Fog Index
+  * Coleman–Liau Index
+* Interactive visual analytics using Plotly
+* Scan history storage
+* Export readability data as CSV
+* Delete individual or all records
 
-Persistent chat history stored in SQLite
+---
 
-Role-based message storage (user / assistant)
+### 5. Void Storage (Data Management)
 
-Export chat history as CSV
+* Centralized data export system
+* Download:
 
-Clear entire chat history
+  * Chat logs
+  * Readability analysis data
+* Bulk deletion of user data
+* Secure user-wise data isolation
 
-4. Cognitive Text Scanner (Readability Analyzer)
+---
 
-Manual text input (minimum 50 characters)
+### 6. Admin Command Center
 
-File upload support:
+* Admin-only access
+* View all registered users
+* Delete users from the system
+* Automatic cleanup of:
 
-TXT files
+  * User accounts
+  * Chat history
+  * Readability records
 
-PDF files
+---
 
-Readability metrics:
+### 7. UI & Experience Enhancements
 
-Flesch Reading Ease
+* Galaxy-themed UI using custom CSS
+* Glassmorphism effects
+* Responsive layout
+* Sidebar-based navigation
 
-Flesch–Kincaid Grade
+---
 
-SMOG Index
+### 8. Ngrok Integration
 
-Gunning Fog Index
+* Streamlit application hosted locally
+* Ngrok used to generate a public URL
+* Enables remote access and live demonstrations
 
-Coleman–Liau Index
+---
 
-Interactive visual analytics using Plotly
+## 🛠 Technologies Used
 
-Scan history storage
+* Python
+* Streamlit
+* SQLite3
+* JWT (JSON Web Tokens)
+* bcrypt
+* SMTP (Email OTP delivery)
+* Pyngrok
+* Plotly
+* Textstat
+* PyPDF2
+* Google Colab
 
-Export readability data as CSV
+---
 
-Delete individual or all records
+## ▶️ Steps to Run the Application
 
-5. Void Storage (Data Management)
+### Step 1: Install Required Libraries
 
-Centralized data export system
-
-Download:
-
-Chat logs
-
-Readability analysis data
-
-Bulk deletion of user data
-
-Secure user-wise data isolation
-
-6. Admin Command Center
-
-Admin-only access
-
-View all registered users
-
-Delete users from the system
-
-Automatic cleanup of:
-
-User accounts
-
-Chat history
-
-Readability records
-
-7. UI & Experience Enhancements
-
-Galaxy-themed UI using custom CSS
-
-Glassmorphism effects
-
-Responsive layout
-
-Sidebar-based navigation
-
-8. Ngrok Integration
-
-Streamlit application hosted locally
-
-Ngrok used to generate a public URL
-
-Enables remote access and live demonstrations
-
-🛠 Technologies Used
-
-Python
-
-Streamlit
-
-SQLite3
-
-JWT (JSON Web Tokens)
-
-bcrypt
-
-SMTP (Email OTP delivery)
-
-Pyngrok
-
-Plotly
-
-Textstat
-
-PyPDF2
-
-Google Colab
-
-▶️ Steps to Run the Application
-Step 1: Install Required Libraries
+```bash
 pip install streamlit pyjwt bcrypt python-dotenv pyngrok nltk streamlit-option-menu plotly textstat PyPDF2
-Step 2: Set Environment Variables
+```
+
+---
+
+### Step 2: Set Environment Variables
+
+```bash
 EMAIL_PASSWORD=your_email_app_password
 JWT_SECRET=your_secret_key
 NGROK_AUTHTOKEN=your_ngrok_token
-Step 3: Run the Streamlit Application
+```
+
+---
+
+### Step 3: Run the Streamlit Application
+
+```bash
 streamlit run app.py
-Step 4: Connect Ngrok (Optional – For Public Access)
+```
+
+---
+
+### Step 4: Connect Ngrok (Optional – For Public Access)
+
+```python
 from pyngrok import ngrok
 ngrok.set_auth_token("YOUR_NGROK_AUTH_TOKEN")
-📸 Screenshots
-🔐 Authentication & Recovery
+```
 
-Login Page
+---
 
+## 🔑 Admin Login Credentials
 
-Signup Page
+The application includes a **default admin account** for demonstration and evaluation purposes.
 
+**Admin Email ID:**
 
-Forgot Password – Email Verification
+```
+sasdfghj771@gmail.com
+```
 
+**Admin Password:**
 
-Password Reset Options
+```
+Bhavi@123
+```
 
+> ⚠️ **Note:**
+> These credentials are intended **only for academic/demo purposes**.
+> In a production environment, admin credentials should be securely stored and never hardcoded.
 
-OTP Verification
+---
 
+## 📸 Screenshots
 
-OTP Mail
+### 🔐 Authentication & Recovery
 
+* Login Page
+  ![Login](Login.png)
 
-Security Code Verification
+* Signup Page
+  ![Signup](Sign_up.png)
 
+* Forgot Password – Email Verification
+  ![Forgot Password](Forgot_password_email_verification.png)
 
-👤 User & Chat
+* Password Reset Options
+  ![Password Reset Options](Password_Reset_Options.png)
 
-User Dashboard
+* OTP Verification
+  ![OTP Verification](OTP_Verification.png)
 
+* OTP Mail
+  ![OTP Mail](OTP_mail.png)
 
-Chat History
+* Security Code Verification
+  ![Security Code](Security_code.png)
 
+---
 
-📊 Analytics
+### 👤 User & Chat
 
-File Readability Analyzer
+* User Dashboard
+  ![User Page](User_page.png)
 
+* Chat History
+  ![Chat History](history.png)
 
-🛡️ Admin Module
+---
 
-Admin Login
+### 📊 Analytics
 
+* File Readability Analyzer
+  ![File Readability](File_Readability.png)
 
-Admin Dashboard
+---
 
+### 🛡️ Admin Module
 
-📂 Project Structure
+* Admin Login
+  ![Admin Login](Admin.png)
+
+* Admin Dashboard
+  ![Admin Dashboard](Admin_Dashboard.png)
+
+---
+
+## 📂 Project Structure
+
+```
 milestone2/
 │
 ├── app.py
@@ -240,31 +273,35 @@ milestone2/
 │   ├── File_Readability.png
 │   ├── Admin.png
 │   └── Admin_Dashboard.png
-🌐 Demonstration Link
+```
 
-Ngrok Public URL:
-https://moonily-jubilatory-curt.ngrok-free.dev/
+---
 
-✅ Milestone 2 Outcome
+## 🌐 Demonstration Link
 
-Successfully developed a secure, scalable dashboard system with:
+**Ngrok Public URL:**
+*https://moonily-jubilatory-curt.ngrok-free.dev/*
 
-Strong authentication and recovery mechanisms
+---
 
-Persistent chat management
+## ✅ Milestone 2 Outcome
 
-Advanced readability analytics
+Successfully developed a **secure, scalable dashboard system** with:
 
-Secure data export and deletion
+* Strong authentication and recovery mechanisms
+* Persistent chat management
+* Advanced readability analytics
+* Secure data export and deletion
+* Admin-level system control
+* Public access using Ngrok
 
-Admin-level system control
+This milestone forms a **robust foundation for future LLM-based AI integration**.
 
-Public access using Ngrok
+---
 
-This milestone forms a robust foundation for future LLM-based AI integration.
+## 👨‍💻 Author
 
-👨‍💻 Author
+**Student Name:** Bhavithravanan C A
+**Program:** Infosys Springboard Internship
+**Milestone:** Milestone 2 – Secure LLM Dashboard & Analytics System
 
-Student Name: Bhavithravanan C A
-Program: Infosys Springboard Internship
-Milestone: Milestone 2 – Secure LLM Dashboard & Analytics System
