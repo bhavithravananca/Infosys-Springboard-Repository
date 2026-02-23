@@ -233,12 +233,19 @@ Bhavi@123
 * Chat History
   ![Chat History](history.png)
 
+* User History
+  ![User History](User_History.png)  
+
 ---
 
 ### 📊 Analytics
 
 * File Readability Analyzer
   ![File Readability](File_Readability.png)
+
+  * File Readability Analyzer
+  ![File Readability](Readablity_analytics.png)
+
 
 ---
 
