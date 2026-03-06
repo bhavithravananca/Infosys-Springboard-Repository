@@ -153,34 +153,34 @@ Ngrok will generate a **public URL** which can be opened in the browser to acces
 # Application Screenshots
 
 ## Dashboard
-![Dashboard](images/dashboard.png)
+![Dashboard](dashboard.png)
 
 ---
 
 ## RAG Search
-![RAG Search](images/rag_search.png)
+![RAG Search](rag_search.png)
 
 ---
 
 ## Knowledge Graph
-![Knowledge Graph](images/knowledge_graph.png)
+![Knowledge Graph](knowledge_graph.png)
 
 ---
 
 ## Policy Summarization
-![Summarization](images/summarizer.png)
+![Summarization](summarizer.png)
 
 ---
 
 ## History Tab
-![History](images/history_tab.png)
+![History](history_tab.png)
 
 ---
 
 ## Admin Dashboard
-![Admin](images/admin_feedback_section.png)
+![Admin](admin_feedback_section.png)
 
-![Admin](images/admin_user_activity.png)
+![Admin](admin_user_activity.png)
 
 ---
 
